@@ -8,7 +8,14 @@ if (!$App->check_login_status()) {
         exit();
     }
 } else {
-    include './utilities/admin-template.php';
+    if (empty($_REQUEST)) {
+        include './utilities/admin-dashboard.php';
+    } else {
+        $req = htmlspecialchars($_REQUEST['v']);
+        if($req === 'new'){
+            include './utilities/new-data.php';
+        }
+    }
 }
 if (isset($_REQUEST['auth'])) {
     $authType = htmlspecialchars($_REQUEST['auth']);

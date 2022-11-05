@@ -29,9 +29,15 @@
 <script src="https://cdn.webxspark.com/plugins/js/query.min.js"></script>
 <script src="./assets/js/wxp.js"></script>
 <script src="./assets/js/script.js"></script>
-<?php if(isset($_REQUEST['auth'])): ?>
+<?php if (isset($_REQUEST['auth'])) : ?>
     <script src="./assets/js/login.js"></script>
 <?php endif; ?>
+<?php if (isset($INIT_SCRIPTS)) {
+    if ($INIT_SCRIPTS == "new-tt") :
+?>
+<script src="./assets/js/new-data.js"></script>
+<?php endif;
+} ?>
 </body>
 
 </html>
