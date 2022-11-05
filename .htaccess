@@ -1,0 +1,25 @@
+RewriteEngine On
+
+php_flag output_buffering on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+RewriteRule ^(.*)$ $1.php [NC,L]
+RewriteRule ^sitemap\.xml/?$ sitemap.php
+
+RewriteRule ^(.*)\.html$ $1.php [L]
+RewriteRule ^(.*)\.htm$ $1.php [L]
+RewriteRule ^(.*)\.asp$ $1.php [L]
+
+RewriteCond $1 !^(index\.php)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?t=$1& [L]
+
+<Files "*.json">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+Header set x-powered-by "Webxspark/2.0"

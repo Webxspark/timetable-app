@@ -1,0 +1,32 @@
+{
+    "version": "1.0",
+    "info":{
+        "title": "TimeTable App",
+        "logo": "https://webxspark.com/assets/images/header_logo-2.png",
+        "support": "alanchris@webxspark.com"
+    },
+    "enc_route": "vAV1g8gb7/esd+66I12zPw==",
+    "encryptions": {
+        "database": false,
+        "email_bot": true
+    },
+    "cookie_key_names": {
+        "tag": "USER_TAG",
+        "username": "USER_NAME",
+        "user_email": "USER_EMAIL"
+    },
+    "database_config": {
+        "db_host": "localhost", 
+        "db_name": "timetable",
+        "db_user": "root",
+        "db_pass": ""
+    },
+    "email_bot":{
+        "port": "587",
+        "host": "ZoUrfNbKlSTPPX6mJLQzw6JdFVdgoE1pueqZpIN3Fx4=",
+        "email": "YgHvbAwXFafg+sDUCe5CBg6cVMOWezXiTQUQ1ZkIEPY=",
+        "pass": "eAl5d2cyDtBzRF4CoCjyZcnpjSzFa8fIztakvh74TPw=",
+        "sender": "Webxspark Services",
+        "reply-to": "services@webxspark.com"
+    }
+}
