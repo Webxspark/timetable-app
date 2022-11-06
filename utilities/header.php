@@ -13,6 +13,29 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/colors/sky.css">
   <link rel="preload" href="./assets/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="icon" type="image/png" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#5eb9f0">
+  <meta name="theme-color" content="#5eb9f0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="TimeTable">
+  <meta name="apple-mobile-web-app-title" content="TimeTable">
+  <meta name="theme-color" content="#5eb9f0">
+  <meta name="msapplication-navbutton-color" content="#5eb9f0">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:title" content="TimeTable App - Webxspark" />
+  <meta property="og:description" content="This source code was submitted by B.Alan Christofer (RA2211003020264) to Codechef team for recruitment process" />
+  <meta property="og:image" content="//webxspark.com/bundles/images/og_image.png" />
 </head>
 
 <body>
@@ -35,7 +58,7 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link" href="mailto:alanchris@webxspark.com">Report an Issue</a>
                 </li>
-                <?php if($App->check_login_status()): ?>
+                <?php if ($App->check_login_status()) : ?>
                   <li class="nav-item dropdown">
                     <a class="nav-link" href="./admin">Admin</a>
                   </li>
@@ -63,11 +86,11 @@
           <div class="navbar-other ms-lg-4">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <li class="nav-item d-none d-md-block">
-                <?php if(!$App->check_login_status()): ?>
-                <a href="./admin?auth=login&redir=<?php echo $App->getLink(); ?>" class="btn btn-sm btn-primary rounded-pill">Login</a>
+                <?php if (!$App->check_login_status()) : ?>
+                  <a href="./admin?auth=login&redir=<?php echo $App->getLink(); ?>" class="btn btn-sm btn-primary rounded-pill">Login</a>
                 <?php endif; ?>
-                <?php if($App->check_login_status()): ?>
-                <a wxpclid="logout" class="btn btn-sm btn-primary rounded-pill">Logout</a>
+                <?php if ($App->check_login_status()) : ?>
+                  <a wxpclid="logout" class="btn btn-sm btn-primary rounded-pill">Logout</a>
                 <?php endif; ?>
               </li>
               <li class="nav-item d-lg-none">

@@ -31,15 +31,26 @@ var App = {
     },
     init_components() {
         this._share();
+        this.initServiceWorker();
     },
-    share(url){
+    initServiceWorker() {
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker
+                    .register("./assets/js/serviceWorker.js")
+                    .then(res => console.log("service worker registered"))
+                    .catch(err => console.log("service worker not registered", err))
+            })
+        }
+    },
+    share(url) {
         navigator.share({
             title: 'TimeTable App',
 
             // URL to share
             url: url
         }).then(() => {
-            
+
         }).catch(err => {
             // Handle errors, if occured
             console.log("Error while using Web share API:");

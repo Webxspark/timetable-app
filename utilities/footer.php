@@ -29,6 +29,7 @@
 <script src="https://cdn.webxspark.com/plugins/js/query.min.js"></script>
 <script src="./assets/js/wxp.js"></script>
 <script src="./assets/js/script.js"></script>
+<script src="./assets/js/serviceWorker.js"></script>
 <?php if (isset($_REQUEST['auth'])) : ?>
     <script src="./assets/js/login.js"></script>
 <?php endif; ?>
