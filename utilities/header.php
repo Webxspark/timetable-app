@@ -21,7 +21,7 @@
       <nav class="navbar navbar-expand-lg classic transparent navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
           <div class="navbar-brand w-100">
-            <a href="./index">
+            <a href="./">
               <img src="./assets/img/logo-dark.png" srcset="https://webxspark.com/assets/images/header_logo-2.png" alt="" />
             </a>
           </div>
@@ -33,7 +33,7 @@
             <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
               <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                  <a class="nav-link" href="#">Report an Issue</a>
+                  <a class="nav-link" href="mailto:alanchris@webxspark.com">Report an Issue</a>
                 </li>
                 <?php if($App->check_login_status()): ?>
                   <li class="nav-item dropdown">

@@ -33,10 +33,16 @@
     <script src="./assets/js/login.js"></script>
 <?php endif; ?>
 <?php if (isset($INIT_SCRIPTS)) {
-    if ($INIT_SCRIPTS == "new-tt") :
-?>
-<script src="./assets/js/new-data.js"></script>
-<?php endif;
+    if ($INIT_SCRIPTS === "new-tt") {
+echo '<script src="./assets/js/new-data.js"></script>';
+} elseif($INIT_SCRIPTS === 'edit-tt'){
+echo '<script src="./assets/js/new-data.js"></script>';
+echo '<script src="./assets/js/edit-data.js"></script>';
+} elseif($INIT_SCRIPTS === "admin"){
+echo '<script src="./assets/js/admin.js"></script>';
+} elseif($INIT_SCRIPTS === "viewer"){
+echo '<script src="./assets/js/viewer.js"></script>';
+    }
 } ?>
 </body>
 

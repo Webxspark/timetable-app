@@ -11,7 +11,7 @@
                         <form autocomplete="off" wxpclid="login-form" action="<wxp-self>" class="text-start mb-3">
                             <wxp-alert></wxp-alert>
                             <div class="form-floating mb-4">
-                                <input type="email" class="form-control" placeholder="Email" id="loginEmail">
+                                <input value="admin@user.com" type="email" class="form-control" placeholder="Email" id="loginEmail">
                                 <label for="loginEmail">Email</label>
                             </div>
                             <div class="form-floating password-field mb-4">
@@ -22,6 +22,9 @@
                             <button type="submit" class="btn btn-primary rounded-pill btn-login w-100 mb-2">Sign In</button>
                         </form>
                         <!-- /form -->
+                        <div class="alert alert-primary">
+                            <h4>Email: admin@user.com<br>Pass: admin</h4>
+                        </div>
                     </div>
                     <!--/.card-body -->
                 </div>

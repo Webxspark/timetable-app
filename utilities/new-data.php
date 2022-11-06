@@ -1,11 +1,12 @@
 <?php include 'header.php' ?>
+
 <section class="wrapper bg-light angled upper-end">
     <div class="container py-14 py-md-16">
-        <form wxpclid="new-data" method="post" action="<wxp-self>">
+        <form autocomplete="off" wxpclid="new-data" method="post" action="<wxp-self>">
             <div class="row">
-                <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+                <div wxpclid="required" class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
                     <p class="lead text-center mb-10">Add a new TimeTable</p>
-                    <div class="messages"></div>
+                    <wxp-alert><?php echo $FUNCTION === 'new' ? '' : '<div class="alert alert-info alert-icon" role="alert"><i class="uil uil-exclamation-circle"></i> Please wait... loading Table data</div>'; ?></wxp-alert>
                     <!--begin::Input group-->
                     <div class="d-flex flex-column mb-8 fv-row">
                         <!--begin::Label-->
@@ -41,8 +42,6 @@
                     </div>
                     <!--end::Input group-->
 
-                    <div></div>
-                    <!-- /form -->
                 </div>
                 <!-- /column -->
             </div>
@@ -65,67 +64,67 @@
                         </tr>
                         <tr>
                             <td><b>MONDAY</b></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="monday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="monday" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="monday" period="1" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="monday" period="2" placeholder="Code/Sub" /></td>
                             <td></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="monday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="monday" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="monday" period="3" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="monday" period="4" placeholder="Code/Sub" /></td>
                             <td rowspan="6" align="center" height="50">
                                 <h2>L<br>U<br>N<br>C<br>H</h2>
                             </td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="monday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="monday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="monday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="monday" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="monday" period="5" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="monday" period="6" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="monday" period="7" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="monday" period="8" placeholder="Code/Sub" /></td>
 
                         </tr>
                         <tr>
                             <td><b>TUESDAY</b></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="tuesday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="tuesday" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="tuesday" period="1" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="tuesday" period="2" placeholder="Code/Sub" /></td>
                             <td></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="tuesday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="tuesday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="tuesday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="tuesday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="tuesday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="tuesday" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="tuesday" period="3" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="tuesday" period="4" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="tuesday" period="5" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="tuesday" period="6" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="tuesday" period="7" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="tuesday" period="8" placeholder="Code/Sub" /></td>
                         </tr>
                         <tr>
                             <td><b>WEDNESDAY</b></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="wednesday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="wednesday" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="wednesday" period="1" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="wednesday" period="2" placeholder="Code/Sub" /></td>
                             <td></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="wednesday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="wednesday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="wednesday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="wednesday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="wednesday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="wednesday" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="wednesday" period="3" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="wednesday" period="4" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="wednesday" period="5" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="wednesday" period="6" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="wednesday" period="7" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="wednesday" period="8" placeholder="Code/Sub" /></td>
                         </tr>
                         <tr>
                             <td><b>THURSDAY</b></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="thursday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="thursday" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="thursday" period="1" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="thursday" period="2" placeholder="Code/Sub" /></td>
                             <td></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="thursday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="thursday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="thursday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="thursday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="thursday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="thursday" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="thursday" period="3" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="thursday" period="4" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="thursday" period="5" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="thursday" period="6" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="thursday" period="7" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="thursday" period="8" placeholder="Code/Sub" /></td>
                         </tr>
                         <tr>
                             <td><b>FRIDAY</b></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="friday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="friday" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="friday" period="1" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="friday" period="2" placeholder="Code/Sub" /></td>
                             <td></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="friday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="friday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="friday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="friday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="friday" placeholder="Code/Sub" /></td>
-                            <td align="center"><input type="text" class="form-control form-control-solid" name="friday" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="friday" period="3" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="friday" period="4" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="friday" period="5" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="friday" period="6" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="friday" period="7" placeholder="Code/Sub" /></td>
+                            <td align="center"><input type="text" class="form-control form-control-solid" style="width: 135px;" name="friday" period="8" placeholder="Code/Sub" /></td>
                         </tr>
                     </table>
                 </div>
@@ -134,14 +133,18 @@
             </div>
             <!--/.row -->
             <div class="text-center">
-                <button type="submit" class="btn btn-primary ">Add Data</button>
+                <button type="submit" class="btn btn-primary "><?php echo $FUNCTION === 'new' ? 'Add Data' : 'Update'; ?></button>
             </div>
         </form>
     </div>
     <!-- /.container -->
     <div></div>
 </section>
-
+<?php echo $FUNCTION === 'new' ? '' : '<dom-if style="display: none;" table-key="'.$_REQUEST["key"].'" />'; ?>
 <?php
-$INIT_SCRIPTS = "new-tt";
+if ($FUNCTION === "new") {
+    $INIT_SCRIPTS = "new-tt";
+} elseif ($FUNCTION === "edit") {
+    $INIT_SCRIPTS = "edit-tt";
+}
 include 'footer.php' ?>

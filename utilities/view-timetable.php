@@ -2,14 +2,26 @@
     <div class="container py-14 py-md-16">
         <div class="row">
             <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center">
-                <h2 class="fs-16 text-uppercase text-primary mb-3">TimeTable of {{CLASS}} <?php echo $dataCount; ?></h2>
+                <h2 class="fs-16 text-uppercase text-primary mb-3">TimeTable of <?php echo $DATA['class'] ?></h2>
             </div>
             <!-- /column -->
         </div>
+        <style>
+            @media (min-width:1400px) {
+                .container,
+                .container-lg,
+                .container-md,
+                .container-sm,
+                .container-xl,
+                .container-xxl {
+                    max-width: 1429px !important;
+                }
+            }
+        </style>
         <div class="row gx-lg-12 gx-xl-16 gy-10 align-items-center">
             <div class="table-responsive">
-                <table style="font-size: 0.72rem;" class="table table-bordered">
-                    <caption class="text-center fw-bold fs-16 text-info">YEAR/SEM/SEC: {{YEAR/SEM/CLASS}}</caption>
+                <table style="font-size: 0.7rem;" class="table table-bordered">
+                    <caption class="text-center fw-bold fs-16 text-info">YEAR/SEM/SEC: <?php echo "{$DATA['year']}/{$DATA['sem']}/{$DATA['class']}" ?></caption>
                     <tr>
                         <td><b>TIME</b></td>
                         <td><b>8:00-8:50</b></td>
@@ -25,58 +37,66 @@
                     </tr>
                     <tr>
                         <td><b>MONDAY</b></td>
-                        <td colspan="2" align="center">21GNH101J/POE</td>
+                        <td name="monday" period="1" align="center">loading...</td>
+                        <td name="monday" period="2" align="center">loading...</td>
                         <td></td>
-                        <td align="center">21CYM101T/EVS</td>
-                        <td align="center">21CSS101J/PPS</td>
+                        <td name="monday" period="3" align="center">loading...</td>
+                        <td name="monday" period="4" align="center">loading...</td>
                         <td rowspan="6" align="center" height="50">
                             <h2>L<br>U<br>N<br>C<br>H</h2>
                         </td>
-                        <td colspan="2" align="center">VAC</td>
-                        <td align="center">21MES102L/EG</td>
-                        <td align="center">-</td>
+                        <td name="monday" period="5" align="center">loading...</td>
+                        <td name="monday" period="6" align="center">loading...</td>
+                        <td name="monday" period="7" align="center">loading...</td>
+                        <td name="monday" period="8" align="center">loading...</td>
                     </tr>
                     <tr>
                         <td><b>TUESDAY</b></td>
-                        <td colspan="2" align="center">21MAB101T/CLA</td>
+                        <td name="tuesday" period="1" align="center">loading...</td>
+                        <td name="tuesday" period="2" align="center">loading...</td>
                         <td></td>
-                        <td align="center">21LEH101T/CE</td>
-                        <td align="center">21PYB102J/SPCM</td>
-                        <td align="center">21CSS101J/PPS</td>
-                        <td align="center">COUNSELLING</td>
-                        <td align="center">LIBRARY</td>
-                        <td align="center">-</td>
+                        <td name="tuesday" period="3" align="center">loading...</td>
+                        <td name="tuesday" period="4" align="center">loading...</td>
+                        <td name="tuesday" period="5" align="center">loading...</td>
+                        <td name="tuesday" period="6" align="center">loading...</td>
+                        <td name="tuesday" period="7" align="center">loading...</td>
+                        <td name="tuesday" period="8" align="center">loading...</td>
                     </tr>
                     <tr>
                         <td><b>WEDNESDAY</b></td>
-                        <td colspan="2" align="center">21CSS101J/PPS</td>
+                        <td name="wednesday" period="1" align="center">loading...</td>
+                        <td name="wednesday" period="2" align="center">loading...</td>
                         <td></td>
-                        <td align="center">21BTB102T/CB</td>
-                        <td align="center">21MAB101T/CLA</td>
-                        <td align="center">21PYB102J/SPCM</td>
-                        <td align="center">21LEH101T/CE</td>
-                        <td align="center">-</td>
-                        <td align="center">-</td>
+                        <td name="wednesday" period="3" align="center">loading...</td>
+                        <td name="wednesday" period="4" align="center">loading...</td>
+                        <td name="wednesday" period="5" align="center">loading...</td>
+                        <td name="wednesday" period="6" align="center">loading...</td>
+                        <td name="wednesday" period="7" align="center">loading...</td>
+                        <td name="wednesday" period="8" align="center">loading...</td>
                     </tr>
                     <tr>
                         <td><b>THURSDAY</b></td>
-                        <td align="center">21MAB101T/CLA</td>
-                        <td align="center">21LEH101T/CE</td>
+                        <td name="thursday" period="1" align="center">loading...</td>
+                        <td name="thursday" period="2" align="center">loading...</td>
                         <td></td>
-                        <td colspan="2" align="center">21PYB102J/SPCM</td>
-                        <td align="center">21BTB102T/CB</td>
-                        <td align="center">21PYB102J/SPCM</td>
-                        <td colspan="2" align="center">21PDM101L/PSP</td>
+                        <td name="thursday" period="3" align="center">loading...</td>
+                        <td name="thursday" period="4" align="center">loading...</td>
+                        <td name="thursday" period="5" align="center">loading...</td>
+                        <td name="thursday" period="6" align="center">loading...</td>
+                        <td name="thursday" period="7" align="center">loading...</td>
+                        <td name="thursday" period="8" align="center">loading...</td>
                     </tr>
                     <tr>
                         <td><b>FRIDAY</b></td>
-                        <td align="center">21PYB102J/SPCM</td>
-                        <td align="center">21CSS101J/PPS</td>
+                        <td name="friday" period="1" align="center">loading...</td>
+                        <td name="friday" period="2" align="center">loading...</td>
                         <td></td>
-                        <td align="center">21GNH101J/POE</td>
-                        <td align="center">21MES102L/EG</td>
-                        <td colspan="2" align="center">21MES102L/EG</td>
-                        <td colspan="2" align="center">21GNM101L/YOGA</td>
+                        <td name="friday" period="3" align="center">loading...</td>
+                        <td name="friday" period="4" align="center">loading...</td>
+                        <td name="friday" period="5" align="center">loading...</td>
+                        <td name="friday" period="6" align="center">loading...</td>
+                        <td name="friday" period="7" align="center">loading...</td>
+                        <td name="friday" period="8" align="center">loading...</td>
                     </tr>
                 </table>
             </div>
@@ -87,3 +107,5 @@
     </div>
     <!-- /.container -->
 </section>
+<dom-if style="display: none;" table-key="<?php echo $DATA['table_key']; ?>" />
+<?php $INIT_SCRIPTS = "viewer"; ?>

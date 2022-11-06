@@ -9,29 +9,62 @@
         </div>
         <!-- /.row -->
         <div class="row">
-            <div class="col-xl-10 mx-auto">
-                <div class="job-list mb-10">
-                    <h3 class="mb-4">Choose a class from this list</h3>
-                    
-                    <a href="#" class="card mb-4 lift">
-                        <div class="card-body p-5">
-                            <span class="row justify-content-between align-items-center">
-                                <span class="col-md-5 mb-2 mb-md-0 d-flex align-items-center text-body">
-                                    <span class="avatar <?php echo $App->randomize_bg() ?> text-white w-9 h-9 fs-17 me-3">C</span> {{CLASS-INFO}} </span>
-                                <span class="col-5 col-md-3 text-body d-flex align-items-center">
-                                    <i class="uil uil-clock me-1"></i> {{TIME-AGO}} </span>
-                                <span class="col-7 col-md-4 col-lg-3 text-body d-flex align-items-center">
-                                    <i class="uil uil-user-check"></i> {{CLASS-INCHARGE}} </span>
-                                <span class="d-none d-lg-block col-1 text-center text-body">
-                                    <i class="uil uil-angle-right-b"></i>
-                                </span>
-                            </span>
-                        </div>
-                        <!-- /.card-body -->
-                    </a>
-                    <!-- /.card -->
-                    
-                </div>
+            <div class="col-xl-10 mx-auto table-responsive">
+                <table class="table table-borderless align-middle gs-0 gy-4">
+                    <!--begin::Table head-->
+                    <thead>
+                        <tr class="border-0">
+                            <th class="p-0"></th>
+                            <th class="p-0 text-center"></th>
+                            <th class="p-0 min-w-100px text-end"></th>
+                        </tr>
+                    </thead>
+                    <!--end::Table head-->
+                    <!--begin::Table body-->
+                    <tbody>
+                        <?php
+                        $stmt = $conn->prepare("SELECT * FROM data");
+                        $stmt->execute();
+                        $res = $stmt->get_result();
+                        $count = $res->num_rows;
+                        if ($count === 0) { ?>
+                            <div class="card mb-4 alert alert-info">
+                                <div class="card-body p-5">
+
+                                    <div class="text-center fs-20">No data found! Click <a href="./admin?v=new">here</a> to add a new TimeTable</div>
+
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                            <?php } else {
+                            while ($row = mysqli_fetch_assoc($res)) :
+                            ?>
+                                <tr class="lift" style="cursor: pointer;" key="<?php echo $row['table_key']; ?>">
+                                    <td onclick="window.location.href='<?php echo './' . $row['table_key']; ?>'">
+                                        <div class="d-flex align-items-center">
+                                            <!--begin::Avatar-->
+                                            <div class="symbol symbol-45px me-5">
+                                                <span class="avatar <?php echo $App->randomize_bg() ?> text-white w-9 h-9 fs-17 me-3"><?php echo strtok($row['class'], ' '); ?></span>
+                                            </div>
+                                            <!--end::Avatar-->
+                                            <!--begin::Name-->
+                                            <div class="d-flex justify-content-start flex-column">
+                                                <a href="./<?php echo $row['table_key']; ?>" class="text-dark fw-bolder text-hover-primary mb-1 fs-16"><?php echo $row['class'] ?></a>
+                                                <!--end::Name-->
+                                            </div>
+                                    </td>
+                                    <td onclick="window.location.href='<?php echo './' . $row['table_key']; ?>'" class="text-center"><?php echo $row['class_incharge'] ?></td>
+                                    <td class="text-end">
+                                        <wxp-share></wxp-share>
+                                    </td>
+                                </tr>
+                        <?php
+                            endwhile;
+                        } ?>
+                    </tbody>
+                    <!--end::Table body-->
+                </table>
             </div>
             <!-- /column -->
         </div>
