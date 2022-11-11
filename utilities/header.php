@@ -8,7 +8,7 @@
   <meta name="keywords" content="">
   <meta name="author" content="Alan Christofer">
   <title><?php echo APP_TITLE; ?></title>
-  <link rel="shortcut icon" href="./assets/img/favicon.png">
+  <link rel="shortcut icon" href="./favicon.ico">
   <link rel="stylesheet" href="./assets/css/plugins.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/colors/sky.css">
@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
   <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="./manifest">
   <meta name="msapplication-TileColor" content="#5eb9f0">
   <meta name="theme-color" content="#5eb9f0">
   <meta name="mobile-web-app-capable" content="yes">

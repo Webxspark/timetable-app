@@ -1,5 +1,6 @@
 const CACHE_NAME = "com.timetable-app.webxspark";
 const assets = [
+  '/',
   './',
   './index',
   './assets/css/plugins.css',

@@ -37,7 +37,7 @@ var App = {
         if ("serviceWorker" in navigator) {
             window.addEventListener("load", function () {
                 navigator.serviceWorker
-                    .register("./assets/js/serviceWorker.js")
+                    .register("./sw.js")
                     .then(res => console.log("service worker registered"))
                     .catch(err => console.log("service worker not registered", err))
             })
